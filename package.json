@@ -38,7 +38,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "client/node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-conventional-changelog"
     },
     "validate-commit-msg": {
       "types": "conventional-commit-types",

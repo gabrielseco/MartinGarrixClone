@@ -1,0 +1,19 @@
+$background-color: #111111;
+
+.container {
+  background: $background-color;
+  padding: 0.5rem 0.8rem;
+}
+
+.innerContainer {
+  align-items: center;
+  display: flex;
+  max-width: 71.25em;
+  min-height: calc(3.125em - 0.5rem);
+  padding: 0 0.9375em;
+  width: 100%;
+}
+
+.logoImg {
+  width: 8.75em;
+}

@@ -1,0 +1,25 @@
+$nav-item-color: #ffffff;
+$nav-item-featured-color: #ffff42;
+$nav-item-color-hover: rgba(255, 255, 255, 0.75);
+$nav-item-size: 0.875em;
+
+.navItem {
+}
+
+.navLink {
+  color: $nav-item-color;
+  font-size: $nav-item-size;
+  font-weight: bold;
+  letter-spacing: 0.0625em;
+  padding: 0 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover:not(.navLinkFeatured) {
+    color: $nav-item-color-hover;
+  }
+}
+
+.navLinkFeatured {
+  color: $nav-item-featured-color;
+}

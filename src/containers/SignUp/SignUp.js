@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styles from './SignUp.scss';
-
-const GET_PUBLIC_PATH = path => `${process.env.PUBLIC_URL}/${path}`;
+import { Header } from 'components';
 
 class SignUp extends Component {
   constructor(props) {
@@ -10,11 +8,7 @@ class SignUp extends Component {
   }
 
   render() {
-    return (
-      <div className={styles.container}>
-        <img src={GET_PUBLIC_PATH('logo.png')} alt="Martin Garrix" />
-      </div>
-    );
+    return <Header />;
   }
 }
 
