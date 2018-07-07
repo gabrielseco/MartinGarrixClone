@@ -1,0 +1,12 @@
+$root-size: 16px;
+
+:root {
+  box-sizing: border-box;
+  font-family: $root-size;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
