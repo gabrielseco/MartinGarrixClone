@@ -1,3 +1,6 @@
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
 $background-color: #111111;
 
 .container {
@@ -16,4 +19,13 @@ $background-color: #111111;
 
 .logoImg {
   width: 8.75em;
+}
+
+.drawerContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  @include respond-to(large) {
+    display: none;
+  }
 }

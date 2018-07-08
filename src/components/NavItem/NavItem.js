@@ -1,8 +1,7 @@
 // @flow
 import React from 'react';
-import styles from './NavItem.scss';
-
 import applyClasses from 'apply-classes';
+import styles from './NavItem.scss';
 
 const NavItem = ({
   children,

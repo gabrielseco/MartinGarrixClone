@@ -33,6 +33,7 @@ class ReactStatefulComponent extends Component {
 
   defaultReactJS(component) {
     return `
+      // @flow
       import React, { Component } from 'react'
       import styles from './${component}.scss'
 

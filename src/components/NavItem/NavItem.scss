@@ -1,9 +1,17 @@
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
 $nav-item-color: #ffffff;
 $nav-item-featured-color: #ffff42;
 $nav-item-color-hover: rgba(255, 255, 255, 0.75);
 $nav-item-size: 0.875em;
 
-.navItem {
+.navItem + .navItem {
+  margin: 1em 0;
+
+  @include respond-to(large) {
+    margin: 0;
+  }
 }
 
 .navLink {

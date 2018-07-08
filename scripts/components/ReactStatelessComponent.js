@@ -30,6 +30,7 @@ class ReactStatelessComponent extends Component {
 
   defaultReactComponent(component) {
     return `
+      // @flow
       import React from 'react';
       import styles from './${component}.scss';
       
