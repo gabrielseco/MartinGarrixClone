@@ -1,20 +1,74 @@
 // @flow
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styles from './Header.scss';
 
-import { GET_PUBLIC_PATH } from './../../utils';
+import {
+  GET_PUBLIC_PATH,
+  addEventsToDocument,
+  removeEventsFromDocument,
+  targetIsDescendant
+} from './../../utils';
 import { Nav, NavItem, DrawerNav } from 'components';
 
 type State = {
   isOpen: boolean
 };
 
-class Header extends React.Component<{}, State> {
-  constructor(props: {}) {
+type Props = {};
+
+class Header extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       isOpen: false
     };
+    (this: any).handleDocumentClick = this.handleDocumentClick.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.closeMenu.bind(this));
+  }
+
+  componentWillUpdate(nextProps: Props, nextState: State) {
+    if (!this.state.isOpen && nextState.isOpen) {
+      addEventsToDocument(this.getDocumentEvents());
+    }
+  }
+
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    if (prevState.isOpen && !this.state.isOpen) {
+      removeEventsFromDocument(this.getDocumentEvents());
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.closeMenu.bind(this));
+    if (this.state.isOpen) {
+      removeEventsFromDocument(this.getDocumentEvents());
+    }
+  }
+
+  closeMenu() {
+    this.setState({
+      isOpen: false
+    });
+  }
+
+  getDocumentEvents() {
+    return {
+      click: this.handleDocumentClick,
+      touchend: this.handleDocumentClick
+    };
+  }
+
+  handleDocumentClick(event: any) {
+    if (
+      this.state.isOpen &&
+      !targetIsDescendant(event, ReactDOM.findDOMNode(this))
+    ) {
+      this.setState({ isOpen: false });
+    }
   }
 
   onMenuOpen() {
