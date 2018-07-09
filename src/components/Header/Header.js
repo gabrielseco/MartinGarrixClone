@@ -98,6 +98,9 @@ class Header extends React.Component<Props, State> {
               />
             </a>
           </div>
+          <div className={styles.drawerContainer}>
+            <DrawerNav onClick={() => this.onMenuOpen()} />
+          </div>
           <Nav isOpen={this.state.isOpen}>
             <NavItem to="/">Home</NavItem>
             <NavItem to="/" newTab>
@@ -112,9 +115,6 @@ class Header extends React.Component<Props, State> {
               ADE 2018
             </NavItem>
           </Nav>
-          <div className={styles.drawerContainer}>
-            <DrawerNav onClick={() => this.onMenuOpen()} />
-          </div>
         </div>
       </header>
     );

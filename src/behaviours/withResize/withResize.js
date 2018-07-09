@@ -1,13 +1,14 @@
 // @flow
 import React from 'react';
 
+type Props = {};
 type State = {
   event: Event | typeof undefined
 };
 
 const withResize = (Component: any) => {
-  const withResizeHOC = class extends React.Component<{}, State> {
-    constructor(props: {}) {
+  const withResizeHOC = class extends React.Component<Props, State> {
+    constructor(props: Props) {
       super(props);
       this.state = {
         event: undefined
