@@ -1,3 +1,6 @@
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
 $color-text: #929292;
 $h1-color: #ffffff;
 
@@ -14,6 +17,10 @@ $h1-color: #ffffff;
 
 .artboard {
   max-width: 16.25em;
+
+  @include respond-to(medium) {
+    max-width: 100%;
+  }
 }
 
 .infoContainer {
@@ -22,10 +29,16 @@ $h1-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   margin: 2em 0;
+
+  @include respond-to(medium) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 6em;
+    width: 100%;
+  }
 }
 
-.infoContainer 
-small,
+.infoContainer small,
 p {
   color: $color-text;
 }
@@ -36,9 +49,14 @@ p {
 
 .infoContainer h1 {
   color: $h1-color;
-  margin: 0;
+  margin: 0 0 0.4em;
   text-align: center;
   text-transform: uppercase;
+
+  @include respond-to(medium) {
+    font-size: 2.5rem;
+    text-align: left;
+  }
 }
 
 .containerButton {

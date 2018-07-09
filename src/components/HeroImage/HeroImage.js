@@ -39,7 +39,7 @@ const HeroImage = ({ images, info }: Props) => {
         <div className={styles.containerButton}>
           <a href={info.url} className={styles.button}>
             <i className="fa fa-play" />
-            Listen Song
+            &nbsp; Listen Song
           </a>
         </div>
       </div>

@@ -34,7 +34,10 @@
       "prettier --write --single-quote",
       "git add"
     ],
-    "*.scss": "stylelint"
+    "*.scss": [
+      "stylelint --syntax=scss ./src/**/*.scss",
+      "prettier --parser scss --write --single-quote"
+    ]
   },
   "config": {
     "commitizen": {
