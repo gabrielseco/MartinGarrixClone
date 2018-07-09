@@ -17,6 +17,16 @@ $background-color: #111111;
   width: 100%;
 }
 
+.logo {
+  padding: 0;
+  @include respond-to(medium) {
+    padding: 0 3rem;
+  }
+  @include respond-to(large) {
+    padding: 0 6rem;
+  }
+}
+
 .logoImg {
   width: 8.75em;
 }

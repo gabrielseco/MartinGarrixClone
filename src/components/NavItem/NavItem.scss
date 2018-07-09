@@ -6,6 +6,10 @@ $nav-item-featured-color: #ffff42;
 $nav-item-color-hover: rgba(255, 255, 255, 0.75);
 $nav-item-size: 0.875em;
 
+.navItem {
+  padding-left: 0;
+}
+
 .navItem + .navItem {
   margin: 1em 0;
 

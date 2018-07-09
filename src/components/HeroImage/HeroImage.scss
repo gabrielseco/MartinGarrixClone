@@ -1,0 +1,59 @@
+$color-text: #929292;
+$h1-color: #ffffff;
+
+.heroImageContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artboardContainer {
+  padding-top: 2.5em;
+}
+
+.artboard {
+  max-width: 16.25em;
+}
+
+.infoContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.infoContainer 
+small,
+p {
+  color: $color-text;
+}
+
+.infoContainer p {
+  margin-top: 0;
+}
+
+.infoContainer h1 {
+  color: $h1-color;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.containerButton {
+  margin-top: 1em;
+}
+
+.button {
+  background: #f00038;
+  border-radius: 1.875em;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.125em;
+  padding: 0.75em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}

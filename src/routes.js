@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { SignUp } from './containers';
+import { Home } from './containers';
 
 const routes = () => (
   <Switch>
-    <Route exact path="/" component={SignUp} />
+    <Route exact path="/" component={Home} />
   </Switch>
 );
 
