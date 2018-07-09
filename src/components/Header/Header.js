@@ -10,24 +10,25 @@ import {
   targetIsDescendant
 } from './../../utils';
 import { Nav, NavItem, DrawerNav } from 'components';
+import { withResize } from 'behaviours';
 
 type State = {
-  isOpen: boolean
+  isOpen: boolean,
+  event: any
 };
 
-type Props = {};
+type Props = {
+  resizeEvent: Event
+};
 
 class Header extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      event: undefined
     };
     (this: any).handleDocumentClick = this.handleDocumentClick.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.closeMenu.bind(this));
   }
 
   componentWillUpdate(nextProps: Props, nextState: State) {
@@ -37,13 +38,20 @@ class Header extends React.Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props, prevState: State) {
+    if (this.state.event !== prevProps.resizeEvent) {
+      this.setState(
+        {
+          event: prevProps.resizeEvent
+        },
+        () => this.closeMenu()
+      );
+    }
     if (prevState.isOpen && !this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.closeMenu.bind(this));
     if (this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
     }
@@ -113,4 +121,6 @@ class Header extends React.Component<Props, State> {
   }
 }
 
-export default Header;
+export { Header };
+
+export default withResize(Header);
