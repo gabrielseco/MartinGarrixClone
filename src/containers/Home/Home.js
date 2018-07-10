@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, HeroImage, LatestReleases } from 'components';
+import { Header, HeroImage, LatestReleases, Footer } from 'components';
 import { heroProps, images } from './data';
 
 class Home extends Component {
@@ -14,6 +14,7 @@ class Home extends Component {
         <Header />
         <HeroImage {...heroProps} />
         <LatestReleases images={images.factory()} />
+        <Footer />
       </React.Fragment>
     );
   }
