@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { Link } from 'react-router-dom';
 import applyClasses from 'apply-classes';
 import styles from './NavItem.scss';
 
@@ -24,13 +25,17 @@ const NavItem = ({
       : {
           [styles.navLink]: true
         };
-  return (
-    <li className={styles.navItem}>
+  const LinkComponent =
+    newTab === true ? (
       <a className={applyClasses(navLinkClassName)} href={to} {...targetProps}>
         {children}
       </a>
-    </li>
-  );
+    ) : (
+      <Link className={applyClasses(navLinkClassName)} to={to} {...targetProps}>
+        {children}
+      </Link>
+    );
+  return <li className={styles.navItem}>{LinkComponent}</li>;
 };
 
 export default NavItem;
