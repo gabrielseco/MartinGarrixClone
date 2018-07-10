@@ -1,7 +1,4 @@
-export const lazyLoadImageCallback = (
-  entries: IntersectionObserverEntry[],
-  observer
-) => {
+export const lazyLoadImageCallback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       observer.unobserve(entry.target);
