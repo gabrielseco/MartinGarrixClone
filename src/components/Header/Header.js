@@ -102,15 +102,15 @@ class Header extends React.Component<Props, State> {
           </div>
           <Nav isOpen={this.state.isOpen}>
             <NavItem to="/">Home</NavItem>
-            <NavItem to="/" newTab>
+            <NavItem to="https://www.bandsintown.com/a/3386497" newTab>
               Tour
             </NavItem>
             <NavItem to="/music">Music</NavItem>
-            <NavItem to="/" newTab>
+            <NavItem to="https://www.themartingarrixshop.com/" newTab>
               Shop
             </NavItem>
             <NavItem to="/contact">Contact</NavItem>
-            <NavItem to="/" newTab featured>
+            <NavItem to="http://stmpd.co/y7dZbVWE" newTab featured>
               ADE 2018
             </NavItem>
           </Nav>

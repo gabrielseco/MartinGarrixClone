@@ -6,11 +6,13 @@ import styles from './NavItem.scss';
 const NavItem = ({
   children,
   newTab,
-  featured
+  featured,
+  to
 }: {
   children: string,
   newTab: boolean,
-  featured: boolean
+  featured: boolean,
+  to: string
 }) => {
   const targetProps = newTab === true ? { target: '_blank' } : undefined;
   const navLinkClassName =
@@ -24,7 +26,7 @@ const NavItem = ({
         };
   return (
     <li className={styles.navItem}>
-      <a className={applyClasses(navLinkClassName)} href="#" {...targetProps}>
+      <a className={applyClasses(navLinkClassName)} href={to} {...targetProps}>
         {children}
       </a>
     </li>
