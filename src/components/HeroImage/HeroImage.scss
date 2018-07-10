@@ -18,7 +18,7 @@ $h1-color: #ffffff;
 
 .artboardContainer {
   padding-top: 2.5em;
-  
+
   @include respond-to(large) {
     padding-top: 0;
     width: 15.9375em;

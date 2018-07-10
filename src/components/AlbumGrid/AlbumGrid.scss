@@ -1,0 +1,52 @@
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
+.container {
+  list-style: none;
+  max-width: 56.25em;
+  padding: 0;
+
+  @include respond-to(medium) {
+    padding: 0 1em;
+  }
+}
+
+
+@supports not(display: grid) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  
+    @include respond-to(medium) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .container li {
+    width: 100%;
+    @include respond-to(medium) {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+@supports(display: grid) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+  
+    @include respond-to(medium) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .container li:first-child {
+    grid-column: span 2;
+  
+    @include respond-to(medium) {
+      grid-column: span 1;
+    }
+  }
+}

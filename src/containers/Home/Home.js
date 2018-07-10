@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Header, HeroImage } from 'components';
-
-import { GET_PUBLIC_PATH } from './../../utils';
+import { Header, HeroImage, LatestReleases } from 'components';
+import { heroProps, images } from './data';
 
 class Home extends Component {
   constructor(props) {
@@ -10,25 +9,11 @@ class Home extends Component {
   }
 
   render() {
-    const heroProps = {
-      images: {
-        backgroundImage: `${GET_PUBLIC_PATH('ocean-bg.jpg')}`,
-        artboard: {
-          url: `${GET_PUBLIC_PATH('martingarrix-khalid-ocean.jpg')}`,
-          alt: 'Martin Garrix feat. Khalid - Ocean'
-        }
-      },
-      info: {
-        date: 'Jun 15, 2018',
-        title: 'Ocean <br/> is out now!',
-        artist: 'Martin Garrix feat. Khalid',
-        url: '#'
-      }
-    };
     return (
       <React.Fragment>
         <Header />
         <HeroImage {...heroProps} />
+        <LatestReleases images={images.factory()} />
       </React.Fragment>
     );
   }
