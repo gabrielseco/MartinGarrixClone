@@ -5,6 +5,7 @@ $background-color: #111111;
 
 .container {
   background: $background-color;
+  overflow: hidden;
   padding: 0.5rem 0.8rem;
 }
 

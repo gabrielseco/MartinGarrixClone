@@ -28,7 +28,6 @@ class Header extends React.Component<Props, State> {
       isOpen: false,
       event: undefined
     };
-    (this: any).handleDocumentClick = this.handleDocumentClick.bind(this);
   }
 
   componentWillUpdate(nextProps: Props, nextState: State) {
@@ -65,8 +64,8 @@ class Header extends React.Component<Props, State> {
 
   getDocumentEvents() {
     return {
-      click: this.handleDocumentClick,
-      touchend: this.handleDocumentClick
+      click: this.handleDocumentClick.bind(this),
+      touchend: this.handleDocumentClick.bind(this)
     };
   }
 
