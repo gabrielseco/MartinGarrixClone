@@ -5,16 +5,18 @@ import type { AlbumGridItemProps } from './../AlbumGridItem';
 import styles from './AlbumGrid.scss';
 
 type Props = {
-  images: AlbumGridItemProps[]
+  images: AlbumGridItemProps[],
+  observer: IntersectionObserver
 };
 
-const AlbumGrid = ({ images }: Props) => (
+const AlbumGrid = ({ images, observer }: Props) => (
   <ul className={styles.container}>
     {images.map(image => (
       <AlbumGridItem
         img={image.img}
         url={image.url}
         title={image.title}
+        observer={observer}
         key={image.url}
       />
     ))}
