@@ -11,7 +11,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(61);
+      var r = n(62);
       Object.keys(r).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -22,18 +22,7 @@
             }
           });
       });
-      var i = n(56);
-      Object.keys(i).forEach(function(e) {
-        'default' !== e &&
-          '__esModule' !== e &&
-          Object.defineProperty(t, e, {
-            enumerable: !0,
-            get: function() {
-              return i[e];
-            }
-          });
-      });
-      var o = n(52);
+      var o = n(57);
       Object.keys(o).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -44,7 +33,18 @@
             }
           });
       });
-      var a = n(48);
+      var i = n(53);
+      Object.keys(i).forEach(function(e) {
+        'default' !== e &&
+          '__esModule' !== e &&
+          Object.defineProperty(t, e, {
+            enumerable: !0,
+            get: function() {
+              return i[e];
+            }
+          });
+      });
+      var a = n(49);
       Object.keys(a).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -55,7 +55,7 @@
             }
           });
       });
-      var l = n(44);
+      var l = n(45);
       Object.keys(l).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -66,7 +66,7 @@
             }
           });
       });
-      var u = n(37);
+      var u = n(38);
       Object.keys(u).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -77,7 +77,7 @@
             }
           });
       });
-      var c = n(33);
+      var c = n(34);
       Object.keys(c).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -154,8 +154,8 @@
     function(e, t, n) {
       var r = n(18);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
@@ -163,7 +163,7 @@
       Object.defineProperty(t, '__esModule', { value: !0 }),
         (t.images = t.heroProps = void 0);
       var r = n(13),
-        i = ((t.heroProps = {
+        o = ((t.heroProps = {
           images: {
             backgroundImage: '' + (0, r.GET_PUBLIC_PATH)('ocean-bg.jpg'),
             artboard: {
@@ -183,47 +183,47 @@
           factory: function() {
             return [
               {
-                img: i.path + '/ocean.jpeg',
+                img: o.path + '/ocean.jpeg',
                 url: 'http://stmpd.co/MKOCWE',
                 title: 'Ocean'
               },
               {
-                img: i.path + '/game-over.jpeg',
+                img: o.path + '/game-over.jpeg',
                 url: 'http://stmpd.co/MLGOWE',
                 title: 'Game Over'
               },
               {
-                img: i.path + '/like-i-do.jpg',
+                img: o.path + '/like-i-do.jpg',
                 url: 'http://stmpd.co/LIDWE',
                 title: 'Like I Do'
               },
               {
-                img: i.path + '/so-far-away.jpg',
+                img: o.path + '/so-far-away.jpg',
                 url: 'https://stmpdrcrds.lnk.to/dlThVWE',
                 title: 'So Far Away'
               },
               {
-                img: i.path + '/pizza.jpg',
+                img: o.path + '/pizza.jpg',
                 url: 'http://stmpd.co/ltoA2WE',
                 title: 'Pizza'
               },
               {
-                img: i.path + '/there-for-you.jpg',
+                img: o.path + '/there-for-you.jpg',
                 url: 'http://stmpd.co/Dj-kpWE',
                 title: 'There for you'
               },
               {
-                img: i.path + '/byte.jpg',
+                img: o.path + '/byte.jpg',
                 url: 'http://stmpd.co/iQNlRWE',
                 title: 'Byte'
               },
               {
-                img: i.path + '/scared-to-be-lonely.jpg',
+                img: o.path + '/scared-to-be-lonely.jpg',
                 url: 'http://stmpd.co/hIG_RWE',
                 title: 'Scared to be lonely'
               },
               {
-                img: i.path + '/make-up-your-mind.jpg',
+                img: o.path + '/make-up-your-mind.jpg',
                 url: 'http://stmpd.co/sL7lBWE',
                 title: 'Make Up Your Mind'
               }
@@ -246,8 +246,8 @@
     function(e, t, n) {
       var r = n(21);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
@@ -263,8 +263,8 @@
             }
             return e;
           },
-        i = l(n(1)),
-        o = l(n(12)),
+        o = l(n(1)),
+        i = l(n(12)),
         a = l(n(22));
       function l(e) {
         return e && e.__esModule ? e : { default: e };
@@ -294,12 +294,12 @@
                 u(t, a.default.navLinkFeatured, !0),
                 t)
               : u({}, a.default.navLink, !0);
-        return i.default.createElement(
+        return o.default.createElement(
           'li',
           { className: a.default.navItem },
-          i.default.createElement(
+          o.default.createElement(
             'a',
-            r({ className: (0, o.default)(f), href: '#' }, s),
+            r({ className: (0, i.default)(f), href: '#' }, s),
             n
           )
         );
@@ -333,8 +333,8 @@
     function(e, t, n) {
       var r = n(25);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     ,
@@ -351,7 +351,7 @@
             }
             return e;
           },
-        i = (function() {
+        o = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n];
@@ -365,7 +365,7 @@
             return n && e(t.prototype, n), r && e(t, r), t;
           };
         })(),
-        o = u(n(1)),
+        i = u(n(1)),
         a = u(n(12)),
         l = u(n(26));
       function u(e) {
@@ -401,7 +401,7 @@
           })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
           return (
             (n.state = { collapsing: !1, scrollHeight: void 0 }),
-            (n.navRef = o.default.createRef()),
+            (n.navRef = i.default.createRef()),
             n
           );
         }
@@ -424,8 +424,8 @@
                 (Object.setPrototypeOf
                   ? Object.setPrototypeOf(e, t)
                   : (e.__proto__ = t));
-          })(t, o.default.Component),
-          i(t, [
+          })(t, i.default.Component),
+          o(t, [
             {
               key: 'componentDidUpdate',
               value: function(e) {
@@ -461,16 +461,16 @@
                   t = this.props,
                   n = t.isOpen,
                   r = t.children,
-                  i = this.state,
-                  u = i.collapsing,
-                  s = i.scrollHeight,
+                  o = this.state,
+                  u = o.collapsing,
+                  s = o.scrollHeight,
                   f = (0, a.default)(
                     (c((e = {}), l.default.nav, !0),
                     c(e, l.default.collapse, n),
                     c(e, l.default.collapsing, u),
                     e)
                   );
-                return o.default.createElement(
+                return i.default.createElement(
                   'ul',
                   { ref: this.navRef, className: f, style: { height: s } },
                   r
@@ -507,33 +507,53 @@
     function(e, t, n) {
       var r = n(30);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = a(n(1)),
-        i = n(7),
-        o = a(n(31));
-      function a(e) {
+      (t.lazyLoadImageCallback = function(e, t) {
+        e.forEach(function(e) {
+          e.isIntersecting &&
+            (t.unobserve(e.target), (e.target.src = e.target.dataset.src));
+        });
+      }),
+        (t.config = {
+          root: document.querySelector('#last-releases'),
+          rootMargin: '50px',
+          threshold: 0.5
+        });
+    },
+    function(e, t, n) {
+      'use strict';
+      Object.defineProperty(t, '__esModule', { value: !0 });
+      var r = l(n(1)),
+        o = n(7),
+        i = n(32),
+        a = l(n(31));
+      function l(e) {
         return e && e.__esModule ? e : { default: e };
       }
+      var u = new window.IntersectionObserver(
+        i.lazyLoadImageCallback,
+        i.config
+      );
       t.default = function(e) {
         var t = e.images;
         return r.default.createElement(
           'div',
-          { className: o.default.container },
+          { className: a.default.container, id: 'last-releases' },
           r.default.createElement('h2', null, 'Latest Releases'),
-          r.default.createElement(i.AlbumGrid, { images: t })
+          r.default.createElement(o.AlbumGrid, { images: t, observer: u })
         );
       };
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(32);
+      var r = n(33);
       Object.defineProperty(t, 'LatestReleases', {
         enumerable: !0,
         get: function() {
@@ -559,42 +579,42 @@
         });
     },
     function(e, t, n) {
-      var r = n(34);
+      var r = n(35);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = o(n(1)),
-        i = o(n(35));
-      function o(e) {
+      var r = i(n(1)),
+        o = i(n(36));
+      function i(e) {
         return e && e.__esModule ? e : { default: e };
       }
       t.default = function(e) {
         var t = e.images,
           n = e.info,
-          o = {
+          i = {
             background: 'url(' + t.backgroundImage + ')',
             backgroundSize: 'cover'
           };
         return r.default.createElement(
           'div',
-          { className: i.default.heroImageContainer, style: o },
+          { className: o.default.heroImageContainer, style: i },
           r.default.createElement(
             'div',
-            { className: i.default.artboardContainer },
+            { className: o.default.artboardContainer },
             r.default.createElement('img', {
-              className: i.default.artboard,
+              className: o.default.artboard,
               src: t.artboard.url,
               alt: t.artboard.alt
             })
           ),
           r.default.createElement(
             'div',
-            { className: i.default.infoContainer },
+            { className: o.default.infoContainer },
             r.default.createElement('small', null, n.date),
             r.default.createElement('h1', {
               dangerouslySetInnerHTML: { __html: n.title }
@@ -602,10 +622,10 @@
             r.default.createElement('p', null, n.artist),
             r.default.createElement(
               'div',
-              { className: i.default.containerButton },
+              { className: o.default.containerButton },
               r.default.createElement(
                 'a',
-                { href: n.url, className: i.default.button },
+                { href: n.url, className: o.default.button },
                 r.default.createElement('i', { className: 'fa fa-play' }),
                 '  Listen Song'
               )
@@ -617,7 +637,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(36);
+      var r = n(37);
       Object.defineProperty(t, 'HeroImage', {
         enumerable: !0,
         get: function() {
@@ -640,7 +660,7 @@
             }
             return e;
           },
-        i = (function() {
+        o = (function() {
           function e(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n];
@@ -654,7 +674,7 @@
             return n && e(t.prototype, n), r && e(t, r), t;
           };
         })(),
-        o = (function(e) {
+        i = (function(e) {
           return e && e.__esModule ? e : { default: e };
         })(n(1));
       t.default = function(e) {
@@ -694,8 +714,8 @@
                   (Object.setPrototypeOf
                     ? Object.setPrototypeOf(e, t)
                     : (e.__proto__ = t));
-            })(n, o.default.Component),
-            i(n, [
+            })(n, i.default.Component),
+            o(n, [
               {
                 key: 'componentDidMount',
                 value: function() {
@@ -723,7 +743,7 @@
               {
                 key: 'render',
                 value: function() {
-                  return o.default.createElement(
+                  return i.default.createElement(
                     e,
                     r({}, this.props, { resizeEvent: this.state.event })
                   );
@@ -741,7 +761,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(38);
+      var r = n(39);
       Object.defineProperty(t, 'withResize', {
         enumerable: !0,
         get: function() {
@@ -754,7 +774,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(39);
+      var r = n(40);
       Object.keys(r).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -781,10 +801,10 @@
         });
     },
     function(e, t, n) {
-      var r = n(41);
+      var r = n(42);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
@@ -805,12 +825,12 @@
             return n && e(t.prototype, n), r && e(t, r), t;
           };
         })(),
-        i = s(n(1)),
-        o = s(n(14)),
-        a = s(n(42)),
+        o = s(n(1)),
+        i = s(n(14)),
+        a = s(n(43)),
         l = n(13),
         u = n(7),
-        c = n(40);
+        c = n(41);
       function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
@@ -854,7 +874,7 @@
                 (Object.setPrototypeOf
                   ? Object.setPrototypeOf(e, t)
                   : (e.__proto__ = t));
-          })(t, i.default.Component),
+          })(t, o.default.Component),
           r(t, [
             {
               key: 'componentWillUpdate',
@@ -903,7 +923,7 @@
               key: 'handleDocumentClick',
               value: function(e) {
                 this.state.isOpen &&
-                  !(0, l.targetIsDescendant)(e, o.default.findDOMNode(this)) &&
+                  !(0, l.targetIsDescendant)(e, i.default.findDOMNode(this)) &&
                   this.setState({ isOpen: !1 });
               }
             },
@@ -919,59 +939,59 @@
               key: 'render',
               value: function() {
                 var e = this;
-                return i.default.createElement(
+                return o.default.createElement(
                   'header',
                   { className: a.default.container },
-                  i.default.createElement(
+                  o.default.createElement(
                     'div',
                     { className: a.default.innerContainer },
-                    i.default.createElement(
+                    o.default.createElement(
                       'div',
                       { className: a.default.logo },
-                      i.default.createElement(
+                      o.default.createElement(
                         'a',
                         { href: '/' },
-                        i.default.createElement('img', {
+                        o.default.createElement('img', {
                           className: a.default.logoImg,
                           src: (0, l.GET_PUBLIC_PATH)('logo.png'),
                           alt: 'Martin Garrix'
                         })
                       )
                     ),
-                    i.default.createElement(
+                    o.default.createElement(
                       'div',
                       { className: a.default.drawerContainer },
-                      i.default.createElement(u.DrawerNav, {
+                      o.default.createElement(u.DrawerNav, {
                         onClick: function() {
                           return e.onMenuOpen();
                         }
                       })
                     ),
-                    i.default.createElement(
+                    o.default.createElement(
                       u.Nav,
                       { isOpen: this.state.isOpen },
-                      i.default.createElement(u.NavItem, { to: '/' }, 'Home'),
-                      i.default.createElement(
+                      o.default.createElement(u.NavItem, { to: '/' }, 'Home'),
+                      o.default.createElement(
                         u.NavItem,
                         { to: '/', newTab: !0 },
                         'Tour'
                       ),
-                      i.default.createElement(
+                      o.default.createElement(
                         u.NavItem,
                         { to: '/music' },
                         'Music'
                       ),
-                      i.default.createElement(
+                      o.default.createElement(
                         u.NavItem,
                         { to: '/', newTab: !0 },
                         'Shop'
                       ),
-                      i.default.createElement(
+                      o.default.createElement(
                         u.NavItem,
                         { to: '/contact' },
                         'Contact'
                       ),
-                      i.default.createElement(
+                      o.default.createElement(
                         u.NavItem,
                         { to: '/', newTab: !0, featured: !0 },
                         'ADE 2018'
@@ -990,7 +1010,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(43);
+      var r = n(44);
       Object.defineProperty(t, 'Header', {
         enumerable: !0,
         get: function() {
@@ -1009,24 +1029,24 @@
         (t.locals = { container: '_26pKBIAl3afzSXDEOouaAB' });
     },
     function(e, t, n) {
-      var r = n(45);
+      var r = n(46);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = o(n(1)),
-        i = o(n(46));
-      function o(e) {
+      var r = i(n(1)),
+        o = i(n(47));
+      function i(e) {
         return e && e.__esModule ? e : { default: e };
       }
       t.default = function() {
         return r.default.createElement(
           'div',
-          { className: i.default.container },
+          { className: o.default.container },
           r.default.createElement('p', null, 'Copyright © 2018 Martin Garrix')
         );
       };
@@ -1034,7 +1054,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(47);
+      var r = n(48);
       Object.defineProperty(t, 'Footer', {
         enumerable: !0,
         get: function() {
@@ -1053,18 +1073,18 @@
         (t.locals = { drawer: 'sLkhHvtNe1ZTzUJLQyuId' });
     },
     function(e, t, n) {
-      var r = n(49);
+      var r = n(50);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = o(n(1)),
-        i = o(n(50));
-      function o(e) {
+      var r = i(n(1)),
+        o = i(n(51));
+      function i(e) {
         return e && e.__esModule ? e : { default: e };
       }
       t.default = function(e) {
@@ -1072,7 +1092,7 @@
         return r.default.createElement(
           'button',
           {
-            className: i.default.drawer,
+            className: o.default.drawer,
             onClick: function() {
               return t();
             }
@@ -1084,7 +1104,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(51);
+      var r = n(52);
       Object.defineProperty(t, 'DrawerNav', {
         enumerable: !0,
         get: function() {
@@ -1103,39 +1123,110 @@
         (t.locals = { item: 'NBqdwhHtXgyTQTs7PSldX' });
     },
     function(e, t, n) {
-      var r = n(53);
+      var r = n(54);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = o(n(1)),
-        i = o(n(54));
-      function o(e) {
+      var r = (function() {
+          function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+              var r = t[n];
+              (r.enumerable = r.enumerable || !1),
+                (r.configurable = !0),
+                'value' in r && (r.writable = !0),
+                Object.defineProperty(e, r.key, r);
+            }
+          }
+          return function(t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
+          };
+        })(),
+        o = a(n(1)),
+        i = a(n(55));
+      function a(e) {
         return e && e.__esModule ? e : { default: e };
       }
-      t.default = function(e) {
-        var t = e.img,
-          n = e.url,
-          o = e.title;
-        return r.default.createElement(
-          'li',
-          { className: i.default.item },
-          r.default.createElement(
-            'a',
-            { href: n, target: '_blank' },
-            r.default.createElement('img', { src: t, alt: o })
-          )
+      var l = (function(e) {
+        function t(e) {
+          !(function(e, t) {
+            if (!(e instanceof t))
+              throw new TypeError('Cannot call a class as a function');
+          })(this, t);
+          var n = (function(e, t) {
+            if (!e)
+              throw new ReferenceError(
+                "this hasn't been initialised - super() hasn't been called"
+              );
+            return !t || ('object' != typeof t && 'function' != typeof t)
+              ? e
+              : t;
+          })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+          return (n.state = {}), (n.imageRef = o.default.createRef()), n;
+        }
+        return (
+          (function(e, t) {
+            if ('function' != typeof t && null !== t)
+              throw new TypeError(
+                'Super expression must either be null or a function, not ' +
+                  typeof t
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: {
+                value: e,
+                enumerable: !1,
+                writable: !0,
+                configurable: !0
+              }
+            })),
+              t &&
+                (Object.setPrototypeOf
+                  ? Object.setPrototypeOf(e, t)
+                  : (e.__proto__ = t));
+          })(t, o.default.Component),
+          r(t, [
+            {
+              key: 'componentDidMount',
+              value: function() {
+                this.props.observer.observe(this.imageRef.current);
+              }
+            },
+            {
+              key: 'render',
+              value: function() {
+                var e = this.props,
+                  t = e.url,
+                  n = e.img,
+                  r = e.title;
+                return o.default.createElement(
+                  'li',
+                  { className: i.default.item },
+                  o.default.createElement(
+                    'a',
+                    { href: t, target: '_blank' },
+                    o.default.createElement('img', {
+                      ref: this.imageRef,
+                      'data-src': n,
+                      alt: r
+                    })
+                  )
+                );
+              }
+            }
+          ]),
+          t
         );
-      };
+      })();
+      t.default = l;
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(55);
+      var r = n(56);
       Object.defineProperty(t, 'AlbumGridItem', {
         enumerable: !0,
         get: function() {
@@ -1155,31 +1246,33 @@
         (t.locals = { container: '_2IVGxNlouU19jrliuBByZt' });
     },
     function(e, t, n) {
-      var r = n(58);
+      var r = n(59);
       'string' == typeof r && (r = [[e.i, r, '']]);
-      var i = { hmr: !0, transform: void 0, insertInto: void 0 };
-      n(5)(r, i);
+      var o = { hmr: !0, transform: void 0, insertInto: void 0 };
+      n(5)(r, o);
       r.locals && (e.exports = r.locals);
     },
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
       var r = a(n(1)),
-        i = n(7),
-        o = a(n(59));
+        o = n(7),
+        i = a(n(60));
       function a(e) {
         return e && e.__esModule ? e : { default: e };
       }
       t.default = function(e) {
-        var t = e.images;
+        var t = e.images,
+          n = e.observer;
         return r.default.createElement(
           'ul',
-          { className: o.default.container },
+          { className: i.default.container },
           t.map(function(e) {
-            return r.default.createElement(i.AlbumGridItem, {
+            return r.default.createElement(o.AlbumGridItem, {
               img: e.img,
               url: e.url,
               title: e.title,
+              observer: n,
               key: e.url
             });
           })
@@ -1189,7 +1282,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(60);
+      var r = n(61);
       Object.defineProperty(t, 'AlbumGrid', {
         enumerable: !0,
         get: function() {
@@ -1216,10 +1309,10 @@
             return n && e(t.prototype, n), r && e(t, r), t;
           };
         })(),
-        i = n(1),
-        o = (function(e) {
+        o = n(1),
+        i = (function(e) {
           return e && e.__esModule ? e : { default: e };
-        })(i),
+        })(o),
         a = n(7),
         l = n(20);
       var u = (function(e) {
@@ -1258,20 +1351,20 @@
                 (Object.setPrototypeOf
                   ? Object.setPrototypeOf(e, t)
                   : (e.__proto__ = t));
-          })(t, i.Component),
+          })(t, o.Component),
           r(t, [
             {
               key: 'render',
               value: function() {
-                return o.default.createElement(
-                  o.default.Fragment,
+                return i.default.createElement(
+                  i.default.Fragment,
                   null,
-                  o.default.createElement(a.Header, null),
-                  o.default.createElement(a.HeroImage, l.heroProps),
-                  o.default.createElement(a.LatestReleases, {
+                  i.default.createElement(a.Header, null),
+                  i.default.createElement(a.HeroImage, l.heroProps),
+                  i.default.createElement(a.LatestReleases, {
                     images: l.images.factory()
                   }),
-                  o.default.createElement(a.Footer, null)
+                  i.default.createElement(a.Footer, null)
                 );
               }
             }
@@ -1284,7 +1377,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(62);
+      var r = n(63);
       Object.defineProperty(t, 'Home', {
         enumerable: !0,
         get: function() {
@@ -1297,7 +1390,7 @@
     function(e, t, n) {
       'use strict';
       Object.defineProperty(t, '__esModule', { value: !0 });
-      var r = n(63);
+      var r = n(64);
       Object.keys(r).forEach(function(e) {
         'default' !== e &&
           '__esModule' !== e &&
@@ -1315,16 +1408,16 @@
       var r = (function(e) {
           return e && e.__esModule ? e : { default: e };
         })(n(1)),
-        i = n(11),
-        o = n(64);
+        o = n(11),
+        i = n(65);
       t.default = function() {
         return r.default.createElement(
-          i.Switch,
+          o.Switch,
           null,
-          r.default.createElement(i.Route, {
+          r.default.createElement(o.Route, {
             exact: !0,
             path: '/',
-            component: o.Home
+            component: i.Home
           })
         );
       };
@@ -1343,24 +1436,24 @@
     function(e, t, n) {
       'use strict';
       var r = l(n(1)),
-        i = n(14),
-        o = n(11),
-        a = l(n(65));
+        o = n(14),
+        i = n(11),
+        a = l(n(66));
       function l(e) {
         return e && e.__esModule ? e : { default: e };
       }
       n(19);
       var u = r.default.createElement(
-        o.HashRouter,
+        i.HashRouter,
         null,
         r.default.createElement('div', null, (0, a.default)())
       );
-      (0, i.render)(u, document.getElementById('root'));
+      (0, o.render)(u, document.getElementById('root'));
     },
     function(e, t, n) {
-      e.exports = n(77);
+      e.exports = n(78);
     }
   ],
-  [[78, 0, 1]]
+  [[79, 0, 1]]
 ]);
-//# sourceMappingURL=main.8465a07dc9ef81a6b7eb.js.map
+//# sourceMappingURL=main.bb5be74fd08984e72dd9.js.map
