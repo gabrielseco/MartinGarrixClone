@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header, HeroImage, LatestReleases, Footer } from 'components';
-import { heroProps, images } from './data';
+import { heroProps, latestReleases } from './../../shared/data';
 
 class Home extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Home extends Component {
       <React.Fragment>
         <Header />
         <HeroImage {...heroProps} />
-        <LatestReleases images={images.factory()} />
+        <LatestReleases images={latestReleases.factory()} />
         <Footer />
       </React.Fragment>
     );

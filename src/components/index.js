@@ -7,3 +7,4 @@ export * from './HeroImage';
 export * from './LatestReleases';
 export * from './Nav';
 export * from './NavItem';
+export * from './Releases';

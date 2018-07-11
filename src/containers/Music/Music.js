@@ -1,11 +1,14 @@
 // @flow
 import React from 'react';
-/* import styles from './Music.scss';
- */
+import { Header, Footer, Releases } from 'components';
+import { releases } from './../../shared/data';
+
 const Music = () => (
-  <div>
-    <h2>Music Stateful Component generated from the cli</h2>
-  </div>
+  <React.Fragment>
+    <Header />
+    <Releases releases={releases.factory()} />
+    <Footer />
+  </React.Fragment>
 );
 
 export default Music;
