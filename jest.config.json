@@ -19,7 +19,6 @@
   "notify": true,
   "moduleNameMapper": {
     "^actions(.*)$": "<rootDir>/src/actions/$1",
-    "^adapters(.*)$": "<rootDir>/src/adapters/$1",
     "^behaviours(.*)$": "<rootDir>/src/behaviours/$1",
     "^components(.*)$": "<rootDir>/src/components/$1",
     "^config(.*)$": "<rootDir>/src/config/$1",

@@ -8,7 +8,7 @@
     "cypress:all": "cypress run",
     "clean:modules": "rm -rf node_modules",
     "coverage:open": "open coverage/lcov-report/index.html",
-    "prepush": "npm run build:prod",
+    "prepush": "npm run test && npm run build:prod",
     "precommit": "npm run flow && lint-staged",
     "commit": "git-cz",
     "flow": "flow",
@@ -113,7 +113,6 @@
   },
   "dependencies": {
     "apply-classes": "^1.0.3",
-    "axios": "^0.18.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-loadable": "^5.4.0",
