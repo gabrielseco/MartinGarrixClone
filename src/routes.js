@@ -4,19 +4,26 @@ import { Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import { Loading } from 'components';
 
+const delay = {
+  delay: 300
+};
+
 const Home = Loadable({
   loader: () => import('./containers/Home/Home'),
-  loading: Loading
+  loading: Loading,
+  ...delay
 });
 
 const Music = Loadable({
   loader: () => import('./containers/Music/Music'),
-  loading: Loading
+  loading: Loading,
+  ...delay
 });
 
 const Contact = Loadable({
   loader: () => import('./containers/Contact/Contact'),
-  loading: Loading
+  loading: Loading,
+  ...delay
 });
 
 const routes = () => (
