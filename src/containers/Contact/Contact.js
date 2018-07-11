@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Header, Footer, ContactLinks } from 'components';
 import { withStyle } from 'behaviours';
 import { GET_PUBLIC_PATH } from './../../utils';
-/* import styles from './Contact.scss';
- */
+
 class Contact extends Component {
   constructor(props) {
     super(props);

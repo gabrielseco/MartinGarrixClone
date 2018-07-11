@@ -1,2 +1,50 @@
-.ContactsLinks {
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
+$contact-links-color: #ffffff;
+
+.container {
+  color: $contact-links-color;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 2em;
+
+  @include respond-to(large) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 7.5em;
+  }
+}
+
+.container li {
+  width: 100%;
+  @include respond-to(large) {
+    width: calc(50% - 0.8em);
+  }
+}
+
+.container li + li {
+  margin-top: 3rem;
+  @include respond-to(large) {
+    margin-top: 0;
+  }
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.container p {
+  color: $contact-links-color;
+}
+
+.container a {
+  color: $contact-links-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
