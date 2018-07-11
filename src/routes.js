@@ -2,15 +2,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
-
-const Loading = ({ isLoading, error }) => {
-  if (isLoading) {
-    return <div>Loading...</div>;
-  } else if (error) {
-    return <div>Sorry, unable to load the page</div>;
-  }
-  return null;
-};
+import { Loading } from 'components';
 
 const Home = Loadable({
   loader: () => import('./containers/Home/Home'),
@@ -22,10 +14,16 @@ const Music = Loadable({
   loading: Loading
 });
 
+const Contact = Loadable({
+  loader: () => import('./containers/Contact/Contact'),
+  loading: Loading
+});
+
 const routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route path="/music" component={Music} />
+    <Route path="/contact" component={Contact} />
   </Switch>
 );
 
