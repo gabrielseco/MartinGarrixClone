@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 import styles from './Header.scss';
 
 import {
@@ -89,13 +90,13 @@ class Header extends React.Component<Props, State> {
       <header className={styles.container}>
         <div className={styles.innerContainer}>
           <div className={styles.logo}>
-            <a href="/">
+            <Link to="/">
               <img
                 className={styles.logoImg}
                 src={GET_PUBLIC_PATH('logo.png')}
                 alt="Martin Garrix"
               />
-            </a>
+            </Link>
           </div>
           <div className={styles.drawerContainer}>
             <DrawerNav onClick={() => this.onMenuOpen()} />
