@@ -1,8 +1,6 @@
 @import '~styles/settings/global';
+@import '~styles/settings/colors';
 @import '~styles/tools/mixins/all';
-
-$background-button: #f00038;
-$color-button: #ffffff;
 
 .container {
   display: flex;
@@ -26,13 +24,9 @@ $color-button: #ffffff;
   }
 }
 
-.container img {
-  max-width: 100%;
-}
-
 .container a {
-  background: $background-button;
-  color: $color-button;
+  background: $button-background-color;
+  color: $white;
   display: inline-block;
   font-size: 0.875rem;
   letter-spacing: 0.125em;

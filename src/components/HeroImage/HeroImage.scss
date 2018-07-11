@@ -1,8 +1,8 @@
 @import '~styles/settings/global';
+@import '~styles/settings/colors';
 @import '~styles/tools/mixins/all';
 
 $color-text: #929292;
-$h1-color: #ffffff;
 
 .heroImageContainer {
   align-items: center;
@@ -62,7 +62,7 @@ p {
 }
 
 .infoContainer h1 {
-  color: $h1-color;
+  color: $white;
   margin: 0 0 0.4em;
   text-align: center;
   text-transform: uppercase;
@@ -78,9 +78,9 @@ p {
 }
 
 .button {
-  background: #f00038;
+  background: $button-background-color;
   border-radius: 1.875em;
-  color: #ffffff;
+  color: $white;
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: bold;

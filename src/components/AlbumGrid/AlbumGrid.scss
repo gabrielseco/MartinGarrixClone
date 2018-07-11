@@ -4,7 +4,6 @@
 .container {
   list-style: none;
   max-width: 56.25em;
-  padding: 0;
 
   @include respond-to(medium) {
     padding: 0 1em;

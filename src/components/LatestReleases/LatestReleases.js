@@ -9,7 +9,7 @@ type Props = {
 };
 
 const LatestReleases = ({ images }: Props) => (
-  <div className={styles.container} id="last-releases">
+  <div className={styles.container}>
     <h2>Latest Releases</h2>
     <AlbumGrid images={images} />
   </div>
