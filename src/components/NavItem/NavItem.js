@@ -15,7 +15,10 @@ const NavItem = ({
   featured: boolean,
   to: string
 }) => {
-  const targetProps = newTab === true ? { target: '_blank' } : undefined;
+  const targetProps =
+    newTab === true
+      ? { target: '_blank', rel: 'noopener noreferrer' }
+      : undefined;
   const navLinkClassName =
     featured === true
       ? {

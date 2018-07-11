@@ -9,7 +9,7 @@ const Releases = ({ releases }: { releases: AlbumGridItemProps }) => (
       return (
         <li className={styles.listItem} key={release.url}>
           <img src={release.img} alt={release.title} />
-          <a href={release.url} target="_blank">
+          <a href={release.url} target="_blank" rel="noopener noreferrer">
             <i className="fa fa-play" />
             &nbsp; Listen Now
           </a>
