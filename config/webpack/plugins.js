@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const InterpolateHtmlPlugin = require('./webpack-plugins/InterpolateHtmlPlugin');
 
 const { TITLE } = require('./../env/dev.env');
+const { pluginExtractCss } = require('./webpack-plugins/extractPlugin');
 
 const PUBLIC_URL = {
   DEV: './images',
@@ -30,7 +31,8 @@ const devPlugins = webpack => [
   ]),
   new InterpolateHtmlPlugin({
     PUBLIC_URL: PUBLIC_URL.DEV
-  })
+  }),
+  pluginExtractCss({ devMode: true })
 ];
 
 const prodPlugins = webpack => [
@@ -59,7 +61,8 @@ const prodPlugins = webpack => [
   ]),
   new InterpolateHtmlPlugin({
     PUBLIC_URL: PUBLIC_URL.PROD
-  })
+  }),
+  pluginExtractCss({ devMode: false })
 ];
 
 const ssrPlugins = webpack => {
@@ -75,7 +78,8 @@ const ssrPlugins = webpack => {
         from: 'assets/images',
         to: 'static/images'
       }
-    ])
+    ]),
+    pluginExtractCss({ devMode: false })
   ];
 };
 

@@ -95,6 +95,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",
     "lint-staged": "^7.1.2",
+    "mini-css-extract-plugin": "^0.4.1",
     "nock": "^9.3.0",
     "node-sass": "^4.8.3",
     "open": "0.0.5",

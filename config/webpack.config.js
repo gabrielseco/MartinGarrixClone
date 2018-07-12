@@ -23,7 +23,7 @@ module.exports = {
   optimization: optimization,
   plugins: devPlugins(webpack),
   module: {
-    rules: commonloaders
+    rules: commonloaders({ devMode: true })
   },
   mode: 'development'
 };

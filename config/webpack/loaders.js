@@ -1,23 +1,12 @@
-const commonloaders = [
+const { loaderExtractCSS } = require('./webpack-plugins/extractPlugin');
+
+const commonloaders = ({ devMode }) => [
   {
     test: /\.js$/,
     exclude: /node_modules/,
     loader: ['babel-loader', 'eslint-loader']
   },
-  {
-    test: /\.scss/,
-    use: [
-      'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          module: true
-        }
-      },
-      'postcss-loader',
-      'sass-loader'
-    ]
-  }
+  loaderExtractCSS({ devMode: devMode })
 ];
 
 const ssrLoaders = [
@@ -26,20 +15,7 @@ const ssrLoaders = [
     exclude: /node_modules/,
     loader: ['babel-loader', 'eslint-loader']
   },
-  {
-    test: /\.scss/,
-    use: [
-      'style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          module: true
-        }
-      },
-      'postcss-loader',
-      'sass-loader'
-    ]
-  }
+  loaderExtractCSS({ devMode: false })
 ];
 
 module.exports = {

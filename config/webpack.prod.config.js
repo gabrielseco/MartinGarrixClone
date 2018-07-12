@@ -18,7 +18,9 @@ module.exports = {
   optimization: optimization,
   plugins: prodPlugins(webpack),
   module: {
-    rules: commonloaders
+    rules: commonloaders({
+      devMode: false
+    })
   },
   mode: 'production'
 };
