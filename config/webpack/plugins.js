@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const InterpolateHtmlPlugin = require('./webpack-plugins/InterpolateHtmlPlugin');
 
@@ -22,10 +21,6 @@ const devPlugins = webpack => [
     title: TITLE,
     template: './assets/index.html',
     inject: 'body'
-  }),
-  new MiniCssExtractPlugin({
-    filename: '[name].css',
-    chunkFilename: '[id].css'
   }),
   new CopyWebpackPlugin([
     {
@@ -56,10 +51,6 @@ const prodPlugins = webpack => [
       removeRedundantAttributes: true
     }
   }),
-  new MiniCssExtractPlugin({
-    filename: '[name].css',
-    chunkFilename: '[id].css'
-  }),
   new CopyWebpackPlugin([
     {
       from: 'assets/images',
@@ -71,7 +62,25 @@ const prodPlugins = webpack => [
   })
 ];
 
+const ssrPlugins = webpack => {
+  return [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        PUBLIC_URL: JSON.stringify('./static/images')
+      }
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'assets/images',
+        to: 'static/images'
+      }
+    ])
+  ];
+};
+
 module.exports = {
   devPlugins: devPlugins,
-  prodPlugins: prodPlugins
+  prodPlugins: prodPlugins,
+  ssrPlugins: ssrPlugins
 };

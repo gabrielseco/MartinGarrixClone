@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const loaders = require('./webpack/loaders');
+const { commonloaders } = require('./webpack/loaders');
 const optimization = require('./webpack/optimization');
 const resolve = require('./webpack/resolve');
 const { prodPlugins } = require('./webpack/plugins');
@@ -18,7 +18,7 @@ module.exports = {
   optimization: optimization,
   plugins: prodPlugins(webpack),
   module: {
-    rules: loaders
+    rules: commonloaders
   },
   mode: 'production'
 };

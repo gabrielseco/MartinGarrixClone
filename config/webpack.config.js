@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const { HOST, PORT } = require('./env/dev.env');
-const loaders = require('./webpack/loaders');
+const { commonloaders } = require('./webpack/loaders');
 const optimization = require('./webpack/optimization');
 const resolve = require('./webpack/resolve');
 const { devPlugins } = require('./webpack/plugins');
@@ -23,7 +23,7 @@ module.exports = {
   optimization: optimization,
   plugins: devPlugins(webpack),
   module: {
-    rules: loaders
+    rules: commonloaders
   },
   mode: 'development'
 };

@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
-const loaders = require('./webpack/loaders');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { ssrLoaders } = require('./webpack/loaders');
+const { ssrPlugins } = require('./webpack/plugins');
+const resolve = require('./webpack/resolve');
 
 module.exports = {
   entry: './src/server.js',
@@ -13,21 +14,9 @@ module.exports = {
   },
   target: 'node',
   externals: nodeExternals(),
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-        PUBLIC_URL: JSON.stringify('./static/images')
-      }
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: 'assets/images',
-        to: 'static/images'
-      }
-    ])
-  ],
+  resolve: resolve,
+  plugins: ssrPlugins(webpack),
   module: {
-    rules: loaders
+    rules: ssrLoaders
   }
 };
