@@ -31,12 +31,6 @@ class Header extends React.Component<Props, State> {
     };
   }
 
-  componentWillUpdate(nextProps: Props, nextState: State) {
-    if (!this.state.isOpen && nextState.isOpen) {
-      addEventsToDocument(this.getDocumentEvents());
-    }
-  }
-
   componentDidUpdate(prevProps: Props, prevState: State) {
     if (this.state.event !== prevProps.resizeEvent) {
       this.setState(
@@ -45,6 +39,9 @@ class Header extends React.Component<Props, State> {
         },
         () => this.closeMenu()
       );
+    }
+    if (!prevState.isOpen && this.state.isOpen) {
+      addEventsToDocument(this.getDocumentEvents());
     }
     if (prevState.isOpen && !this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());

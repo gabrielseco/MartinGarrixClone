@@ -6,9 +6,11 @@ import routes from './routes';
 import './styles/main.scss';
 
 const app = (
-  <Router>
-    <div>{routes()}</div>
-  </Router>
+  <React.StrictMode>
+    <Router>
+      <div>{routes()}</div>
+    </Router>
+  </React.StrictMode>
 );
 
 render(app, document.getElementById('root'));
