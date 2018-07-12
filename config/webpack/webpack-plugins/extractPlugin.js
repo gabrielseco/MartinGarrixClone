@@ -2,8 +2,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const pluginExtractCss = ({ devMode }) =>
   new MiniCssExtractPlugin({
-    filename: devMode ? '[name].css' : '[name].[hash].css',
-    chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+    filename: devMode ? '[name].css' : 'css/[name].[hash].css',
+    chunkFilename: devMode ? '[id].css' : 'css/[id].[hash].css'
   });
 
 const loaderExtractCSS = ({ devMode }) => ({

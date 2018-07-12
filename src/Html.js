@@ -1,4 +1,4 @@
-const Html = ({ body, title }) => `
+const Html = ({ body, title, styles }) => `
   <!DOCTYPE html>
   <html>
     <head>
@@ -9,10 +9,10 @@ const Html = ({ body, title }) => `
       <title>${title}</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      ${styles}
     </head>
     <body>
       <div id="root">${body}</div>
-    </body>
   </html>
 `;
 

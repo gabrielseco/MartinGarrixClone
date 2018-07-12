@@ -16,6 +16,7 @@
     "dev": "node config/browser-open.js && node config/webpack-server.js",
     "prebuild:ssr": "rm -rf ./dist",
     "build:ssr": "webpack -p --config ./config/webpack.ssr.config.js",
+    "postbuild:ssr": "mv dist/static/server.js dist/server.js",
     "prebuild:dev": "rm -rf ./public",
     "build:dev": "npm run build:dev:prod",
     "postbuild:dev": "mv public/static/index.html public/index.html",

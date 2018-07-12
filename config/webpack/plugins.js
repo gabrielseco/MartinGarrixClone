@@ -76,7 +76,7 @@ const ssrPlugins = webpack => {
     new CopyWebpackPlugin([
       {
         from: 'assets/images',
-        to: 'static/images'
+        to: 'images'
       }
     ]),
     pluginExtractCss({ devMode: false })

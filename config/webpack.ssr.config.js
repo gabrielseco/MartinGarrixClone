@@ -8,7 +8,7 @@ const resolve = require('./webpack/resolve');
 module.exports = {
   entry: './src/server.js',
   output: {
-    path: path.resolve(__dirname, './../dist'),
+    path: path.resolve(__dirname, './../dist/static'),
     filename: 'server.js',
     publicPath: '/'
   },
