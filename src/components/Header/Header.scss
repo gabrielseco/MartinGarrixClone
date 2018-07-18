@@ -11,8 +11,8 @@
 .innerContainer {
   align-items: center;
   display: flex;
+  height: calc(3.125em - 0.5rem);
   max-width: 71.25em;
-  min-height: calc(3.125em - 0.5rem);
   padding: 0 0.9375em;
   width: 100%;
 }
