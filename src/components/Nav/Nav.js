@@ -9,7 +9,6 @@ type Props = {
 };
 
 type State = {
-  collapsing: boolean,
   scrollHeight: number | typeof undefined
 };
 
@@ -18,7 +17,6 @@ class Nav extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      collapsing: false,
       scrollHeight: undefined
     };
     this.navRef = React.createRef();
@@ -26,41 +24,26 @@ class Nav extends React.Component<Props, State> {
 
   componentDidUpdate(prevProps: Props) {
     if (!prevProps.isOpen && this.props.isOpen) {
-      this.setState(
-        {
-          collapsing: true
-        },
-        () => {
-          this.setState(prevState => ({
-            ...prevState,
-            scrollHeight: this.navRef.current.scrollHeight
-          }));
-        }
-      );
-
-      this.navRef.current.addEventListener(
-        'transitionend',
-        this.navTransitionEnd.bind(this),
-        false
-      );
+      this.setState(prevState => ({
+        ...prevState,
+        scrollHeight: this.navRef.current.scrollHeight
+      }));
     }
-  }
 
-  navTransitionEnd() {
-    this.setState(prevState => ({
-      ...prevState,
-      collapsing: false,
-      scrollHeight: undefined
-    }));
+    if (prevProps.isOpen && !this.props.isOpen) {
+      this.setState(prevState => ({
+        ...prevState,
+        scrollHeight: undefined
+      }));
+    }
   }
 
   render() {
     const { isOpen, children } = this.props;
-    const { collapsing, scrollHeight } = this.state;
+    const { scrollHeight } = this.state;
     const classNames = applyClasses({
       [styles.nav]: true,
-      [styles.collapse]: isOpen,
-      [styles.collapsing]: collapsing
+      [styles.collapse]: isOpen
     });
     return (
       <ul

@@ -12,5 +12,9 @@
     "selector-class-pattern": null,
     "string-quotes": "single",
     "block-no-empty": null
-  }
+  },
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx"
+  ]
 }
